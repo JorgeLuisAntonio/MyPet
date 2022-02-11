@@ -1,0 +1,70 @@
+<link rel="stylesheet" type="text/css" href="css/principal.css">
+<div class="row">
+    <div class="col-sm-12">
+         <div class="card border-info">
+            <div class="card-header">
+                Control de Compras
+                <div class="form-inline float-right">
+                    <button class="btn btn-outline-danger">X</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="card border-info">
+                            <div class="card-header active bg-primary text-white">
+                                Detalles de Compras
+                            </div>
+                            <div class="card-body">
+                                <div class="form">
+                                    <div class="form-group">
+                                        <label for="txtIdCompra">IdCompra (Folio Compra):</label>
+                                        <input id="txtIdCompra" type="text" class="form-control" readonly />
+                                    </div> 
+                                    <div class="form-group">
+                                        <label for="txtIdEmpleado">IdEmpleado:</label>
+                                        <input id="txtIdEmpleado" type="text" class="form-control" readonly />
+                                    </div> 
+                                    <div class="form-group">
+                                        <label for="txtIdProveedor">IdProveedor:</label>
+                                        <input id="txtIdProveedor" type="text" class="form-control" readonly />
+                                    </div>       
+                                    <div class="form-group">
+                                        <label for="txtfCompra">Fecha Compra:</label>
+                                        <input id="txtfCompra" type="date" class="form-control" readonly />
+                                    </div> 
+                                    <div class="form-inline mt-4 float-right">
+                                        <button class="btn btn-primary">Guardar</button>
+                                        <button class="btn btn-danger mx-4">Cancelar</button>
+                                        <button class="btn btn-success mt-3">Nuevo</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="card border-info">
+                            <div class="card-header active bg-primary text-white">
+                                Listado de Compra
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Id</th>
+                                            <th>IdEmpleado</th>
+                                            <th>IdProveedor</th>
+                                            <th>Fecha Compra</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbodyCompras">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

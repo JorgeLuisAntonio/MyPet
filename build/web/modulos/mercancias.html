@@ -1,0 +1,130 @@
+<script type="text/javascript" src="js/mercancia.js"></script>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-header">
+                Control de Mercancia
+
+                <div class="form-inline float-right">
+                    <button class="btn btn-outline-danger">X</button>
+                </div>  
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-header active bg-primary text-white">
+                                Registro de Mercancia
+                            </div>
+                            <div class="card-body">
+                                <div class="form">
+                                    <div class="form-group">
+                                        <label for="txtFoto">Foto: </label>
+                                        <img id="imgFoto" width="128" height="128" alt="" />
+                                        <input class="form-control" type="file" id="txtFoto" onchange="loadFoto();" />
+                                        <textarea class="form-control" name="txaBase64" id="txaBase64"> </textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtNombre">Nombre: </label>
+                                        <input id="txtNombre" type="text" class="form-control" />
+                                    </div>
+                                    <div class="form-row">
+                                        <label class="col-sm-12 text-center font-weight-bold">Precio</label>
+                                        <div class="col-sm-6">
+                                            <label for="txtPrecioCompra" class="text-info">Compra: </label>
+                                            <input id="txtPrecioCompra" type="text" class="form-control text-right"/>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="txtPrecioVenta" class="text-primary">Venta: </label>
+                                            <input id="txtPrecioVenta" type="text" class="form-control text-right" readonly/>
+                                        </div>
+                                    </div>
+
+                                    <label for="txtaDescripcion">Descripcion: </label>
+                                    <input id="txtaDescripcion" type="text" class="form-control">
+
+                                    <div class="form-group">
+                                        <label for="txtMarca">Marca: </label>
+                                        <input id="txtMarca" type="text" class="form-control"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtModelo">Modelo: </label>
+                                        <input id="txtModelo" type="text" class="form-control"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtExistencias">Existencias: </label>
+                                        <input id="txtExistencias" type="number" class="form-control text-right"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtCodigoBarras">Codigo de Barras</label> 
+                                        <input id="txtCodigoBarras" type="text" class="form-control"/>
+                                        <br>
+                                        <label for="txtCodigoBarras">Codigo de Barras</label> 
+                                        <div class="form-inline">
+                                            <input id="txtIdProducto" type="text" class="form-control col-sm-6" readonly />
+                                            <input id="txtIdMercancia" type="text" class="form-control col-sm-6" readonly />
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form-group">
+                                        <button class="btn btn-primary" onclick="saveMer();">Guardar</button>
+
+                                        <button class="btn btn-outline-success" onclick="cleanFieldsMer();"> <i class="fa fa-address-card"></i>Nuevo
+                                        </button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="card">
+                            <div class="card-header active bg-primary text-white">
+                                <div>
+                                    <p class="float-left mr-4">Cat&aacute;logo de Mercancias</p>
+                                    <button class="btn btn-danger float-left mr-4" onclick="listMerInactive();">Inactivos</button>
+                                    <button class="btn btn-success float-left" onclick="listMer();">Activos</button>
+                                    <button class="btn btn-warning float-right" onclick="search();">Buscar</button>
+                                    <input id="txtBusqueda" type="text" class="float-right mr-4 form-control col-sm-3" placeholder="Buscar"/>
+                                </div>
+
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="table-responsive">
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th></th>
+                                                        <th></th>
+                                                        <th>Foto</th>
+                                                        <th>Nombre</th>
+                                                        <th>Precio Venta</th>
+                                                        <th>Descripcion</th>
+                                                        <th>Marca</th>
+                                                        <th>Modelo</th>
+                                                        <th>Existencias</th>
+                                                        <th>Codigo Barras</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id='tBodyMercancias'>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    listMer();
+</script>

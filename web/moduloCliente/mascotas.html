@@ -1,0 +1,48 @@
+
+<script type="text/javascript" src="js/modoCliente/mascota.js"></script>
+
+    
+            
+            <div class="card-body">
+                <div class="row">
+                    
+                    <div class="col-sm-12">
+                        <div class="card border-info">
+                            <div class="card-header active bg-primary text-white" >
+                               
+                                <div > 
+                                    <p class="float-left">Cat&aacute;logo de Mascotas</p>
+                                    
+                                    <button class="btn btn-warning float-right" onclick="search();">Buscar</button>
+                                    <input id="txtBusqueda" type="text" class="float-right mr-4 form-control col-sm-3" placeholder="Buscar"/>
+                                </div>
+                            </div>
+                            <div class="table-responsive" >
+                                <table class="table table-hover" >
+                                    <thead>
+                                        <tr>
+                                            
+                                            <th>Foto</th>
+                                            <th>Nombre</th>
+                                            <th>Raza</th>
+                                            <th>Especie</th>
+                                            <th>Existencias</th>
+                                            <th>Fecha Nacimiento</th>
+                                            <th>Fecha Llegada</th>
+                                            <th>Precio Venta</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbodyAnimales">
+                                        
+                                    </tbody>
+                                        
+                                </table>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        
+<script type="text/javascript">
+    listAni();
+</script>

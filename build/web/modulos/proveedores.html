@@ -1,0 +1,135 @@
+<script type="text/javascript" src="js/proveedor.js"></script>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card border-info">
+            <div class="card-header ">
+                Control de Proveedores
+                <div class="form-inline float-right">
+                    <button class="btn btn-outline-danger">X</button>
+                </div>               
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="card border-info">
+                            <div class="card-header active bg-primary text-white">
+                                Detalles del Proveedor                                
+                            </div>
+                            <div class="card-body">
+                                <div class="form">
+                                    <div class="form-group">
+                                        <label for="txtIdPersona">IdPersona:</label>
+                                        <input id="txtIdPersona" type="text" class="form-control" readonly />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtIdProveedor">IdProveedor:</label>
+                                        <input id="txtIdProveedor" type="text" class="form-control" readonly />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtNombre">Nombre del Representante:</label>
+                                        <input id="txtNombre" type="text" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtApellidoP">Apellido Paterno:</label>
+                                        <input id="txtApellidoP" type="text" class="form-control" />
+                                    </div> 
+                                    <div class="form-group">
+                                        <label for="txtApellidoM">Apellido Materno:</label>
+                                        <input id="txtApellidoM" type="text" class="form-control" />
+                                    </div>                                                                        
+                                    <div class="form-group">
+                                        <label for="txtCalle">Calle:</label>
+                                        <input id="txtCalle" type="text" class="form-control" />
+                                    </div>          
+                                    <div class="form-group">
+                                        <label for="txtNumero">N&uacute;mero:</label>
+                                        <input id="txtNumero" type="text" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtColonia">Colonia:</label>
+                                        <input id="txtColonia" type="text" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtCodigoP">Codigo Postal:</label>
+                                        <input id="txtCodigoP" type="text" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtCuidad">Ciudad:</label>
+                                        <input id="txtCuidad" type="text" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtEstado">Estado:</label>
+                                        <input id="txtEstado" type="text" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtTel1">tel1:</label>
+                                        <input id="txtTel1" type="text" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtTel2">tel2:</label>
+                                        <input id="txtTel2" type="text" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtRazonS">Raz&oacute;n Social:</label>
+                                        <textarea id="txtRazonS" class="form-control"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtRFC">RFC:</label>
+                                        <input id="txtRFC" type="text" class="form-control" />
+                                    </div>                                     
+                                    
+                                    <div class="form-inline float-left">
+                                        <button class="btn btn-primary mr-3" onclick="saveProv();">Guardar</button>
+                                        <button class="btn btn-success" onclick="cleanFieldsProv();">Limpiar</button>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="card border-info">
+                            <div class="card-header active bg-primary text-white">
+                                <div>
+                                    <p class="float-left mr-4">Registro de Proveedores</p>
+                                    <button class="btn btn-danger float-left mr-4" onclick="listProvInactive();">Inactivos</button>
+                                    <button class="btn btn-success float-left" onclick="listProv();">Activos</button>
+                                    <button class="btn btn-warning float-right" onclick="search();">Buscar</button>
+                                    <input id="txtBusqueda" type="text" class="float-right mr-4 form-control col-sm-3" placeholder="Buscar"/>
+                                </div>                              
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>        
+                                            <th></th>
+                                            <th></th>
+                                            <th>Nombre</th>
+                                            <th>A.Paterno</th>
+                                            <th>A.Materno</th>                                                                       
+                                            <th>Calle</th>
+                                            <th>N&uacute;m.</th>
+                                            <th>Colonia</th>
+                                            <th>CP</th>
+                                            <th>Ciudad</th>
+                                            <th>Estado</th>
+                                            <th>Tel1</th>
+                                            <th>Tel2</th>
+                                            <th>R.Social</th>
+                                            <th>Rfc</th>
+                                            <th>Estatus</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbodyProveedores">
+                                    </tbody>
+                                </table>
+                            </div>
+                           
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">listProv();</script>

@@ -1,0 +1,85 @@
+<script type="text/javascript" src="js/venta.js"></script>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-header">
+                Control de Venta
+
+                <div class="form-inline float-right">
+                    <button class="btn btn-outline-danger">X</button>
+                </div>  
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-3">
+
+                        <div class="col-sm-12">
+                            <div class="form-group row col-sm-12">       
+                                <input id="txtBusquedaCliente" type="text" class="float-left  form-control " placeholder="Buscar"/>
+                                <button class="btn btn-outline-warning float-left mt-2" onclick="searchCliente();">Buscar Cliente</button> 
+                            </div>
+                            <div class="form-group row col-sm-12">
+
+                                <input id="txtBusquedaMercancia" type="text" class="float-left  form-control " placeholder="Buscar"/>
+                                <button class="btn btn-outline-primary float-left mt-2" onclick="searchMercancia();">Buscar Mercancia</button> 
+                            </div>
+                            <div class="form-group row col-sm-12">
+
+                                <input id="txtBusquedaAnimal" type="text" class="float-left  form-control " placeholder="Buscar"/>
+                                <button class="btn btn-outline-danger float-left mt-2" onclick="searchAnimal();">Buscar Animal</button> 
+                            </div> 
+                        </div>
+
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-header">
+                                Registro de Venta
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="table-responsive">
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="text-center">Ventas $</th>
+
+                                                    </tr>
+                                                </thead>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="card">
+                            <div class="card-header">
+                                Registro de Busquedas
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="table-responsive">
+                                            <table class="table table-hover">
+                                                <thead>
+                                                </thead>
+                                                <tbody id='tBodyVentas'>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

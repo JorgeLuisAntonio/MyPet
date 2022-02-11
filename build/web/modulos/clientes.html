@@ -1,0 +1,170 @@
+<script type="text/javascript" src="js/cliente.js"></script>
+<script src="../js/cliente.js" type="text/javascript"></script>
+<script src="../js/cliente.js" type="text/javascript"></script>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-header">
+                Control de Clientes
+                <div class="form-inline float-right">
+                    <button class="btn btn-outline-danger">X</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div  class="col-sm-3">
+                        <div class="card">
+                            <div class="card-header active bg-primary text-white">
+                                Registro de Cliente
+                                <div class="form-inline float-right">
+                                    <button class="btn btn-sm btn-outline-danger">X</button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="form">
+                                    <div class="form-group">
+                                        <label for="txtNombre">Nombre: </label>
+                                        <input id="txtNombre" type="text" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtAp1">Apellido Paterno: </label>
+                                        <input id="txtAp1" type="text" class="form-control"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtAp2">Apellido Materno: </label>
+                                        <input id="txtAp2" type="text" class="form-control"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtFechaN">Fecha de Nacimiento: </label>
+                                        <input id="txtFechaN" type="date" class="form-control "/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtCalle">Calle: </label>
+                                        <input id="txtCalle" type="text" class="form-control "/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtNum">Numero: </label>
+                                        <input id="txtNum" type="text" class="form-control"/>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="txtColonia">Colonia</label> 
+                                        <input id="txtColonia" type="text" class="form-control"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtCP"> Codigo Postal: </label>
+                                        <input id="txtCP" type="number" class="form-control "/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtCiudad">Ciudad: </label>
+                                        <input id="txtCiudad" type="text" class="form-control"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtEstado">Estado: </label>
+                                        <input id="txtEstado" type="text" class="form-control"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtTel1">Telefono 1: </label>
+                                        <input id="txtTel1" type="text" class="form-control "/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtTel2">Telefono 2: </label>
+                                        <input id="txtTel2" type="text" class="form-control"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtCorreo">Correo: </label>
+                                        <input id="txtCorreo" type="text" class="form-control"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtContra">Contraseña: </label>
+                                        <input id="txtContra" type="text" class="form-control"/>
+                                    </div>
+
+                                    <div class="form-inline">
+                                        <input id="txtIdPersona" type="text" class="form-control col-sm-6" readonly />
+                                        <input id="txtIdCliente" type="text" class="form-control col-sm-6" readonly />
+                                    </div>
+
+                                </div>
+                              <div class="form-group">
+                                  
+                                    <button class="btn btn-primary mt-4" onclick="saveCli();">Guardar</button>
+                     
+                                    <button class="btn btn-success mt-4" onclick="cleanFieldsCli();"> <i class="fa fa-address-card"></i>Nuevo</button>
+
+                                </div>
+                            </div>
+                        </div>        
+                    </div>                        
+                    <div class="col-sm-9">
+                        <div class="card">
+                            <div class="card-header active bg-primary text-white">
+                                <div>
+                                    <p class="float-left mr-4">Cat&aacute;logo de Clientes</p>
+                                    <button class="btn btn-danger float-left mr-4" onclick="listCliInactive();">Inactivos</button>
+                                    <button class="btn btn-success float-left" onclick="listCliente();">Activos</button>
+                                    <button class="btn btn-warning float-right" onclick="search();">Buscar</button>
+                                    <input id="txtBusqueda" type="text" class="float-right mr-4 form-control col-sm-3" placeholder="Buscar"/>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+
+                                    <div class="col-sm-12">
+                                        <div class="table-responsive">
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th></th>
+                                                        <th></th>
+                                                        <th>Nombre</th>
+                                                        <th>Apellido Paterno</th>
+                                                        <th>Apellido Materno</th>
+                                                        <th>Fecha de Nacimiento</th>
+                                                        <th>Calle</th>
+                                                        <th>Numero</th>
+                                                        <th>Colonia </th>
+                                                        <th>CP</th>
+                                                        <th>Ciudad</th>
+                                                        <th>Estado</th>
+                                                        <th>Tel 1</th>
+                                                        <th>Tel  2</th>
+                                                        <th>Correo E.</th>
+                                                        <th>Contraseña</th>
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="tBodyClientes">
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>        
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        listCliente();
+    </script>
+
+
+
+
+
+    <html><head><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8"><meta name="Robots" content="NOINDEX " /></head><body></body>
+        <script type="text/javascript">
+            var gearPage = document.getElementById('GearPage');
+            if (null != gearPage)
+            {
+                gearPage.parentNode.removeChild(gearPage);
+                document.title = "Error";
+            }
+        </script>
+    </html>

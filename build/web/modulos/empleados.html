@@ -1,0 +1,141 @@
+<script type="text/javascript" src="js/empleado.js"></script>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card border-info">
+            <div class="card-header">
+                Control de Empleados
+                <div class="form-inline float-right">
+                    <button class="btn btn-outline-danger">X</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-3">
+                         <div class="card border-info">
+                            <div class="card-header active bg-primary text-white">
+                                Detalles de Empleado
+                            </div>
+                            <div class="card-body">
+                                <div class="form">
+                                    <div class="form-group">
+                                        <label for="txtNombreE">Nombre: </label>
+                                        <input id="txtNombreE" type="text" class="form-control"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtAPaterno">A.Paterno: </label>
+                                        <input id="txtAPaterno" type="text" class="form-control"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtAMaterno">A.Materno: </label>
+                                        <input id="txtAMaterno" type="text" class="form-control"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtFechaE">Fecha de Nacimiento: </label>
+                                        <input id="txtFechaE" type="date" class="form-control"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtCalle">Calle: </label>
+                                        <input id="txtCalle" type="text" class="form-control"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtNumero">Número: </label>
+                                        <input id="txtNumero" type="text" class="form-control"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtColonia">Colonia: </label>
+                                        <input id="txtColonia" type="text" class="form-control"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtCP">CP: </label>
+                                        <input id="txtCP" type="text" class="form-control"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtCiudad">Ciudad: </label>
+                                        <input id="txtCiudad" type="text" class="form-control"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtEstado">Estado: </label>
+                                        <input id="txtEstado" type="text" class="form-control"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtTel1">Tel1: </label>
+                                        <input id="txtTel1" type="text" class="form-control"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtTel2">Tel2: </label>
+                                        <input id="txtTel2" type="text" class="form-control"/>
+                                    </div>
+                                     <div class="form-group">
+                                        <label for="txtCorreoE">Correo: </label>
+                                        <input id="txtCorreoE" type="text" class="form-control"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtContrasenia">Contraseña: </label>
+                                        <input id="txtContrasenia" type="text" class="form-control"/>
+                                    </div>
+                                <div class="form-group">
+                                    <label for="txtCodigoBarras">Códigos</label> 
+                                    <div class="form-inline">
+                                        <input id="txtIdPersona" type="text" class="form-control col-sm-6" readonly />
+                                        <input id="txtIdEmpleado" type="text" class="form-control col-sm-6" readonly />
+                                    </div>
+                                    
+                                    </div>
+                                     
+                                    <div class="form-group">
+                                        <button class="btn btn-primary mt-4" onclick="saveEmp();">Guardar</button>
+                                        <button class="btn btn-outline-success mt-4" onclick="cleanFieldsEmp();">Nuevo</button>
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="card border-info">
+                            <div class="card-header active bg-primary text-white">
+                                 <div>
+                                    <p class="float-left mr-4">Registro de Empleados</p>
+                                    <button class="btn btn-danger float-left mr-4" onclick="listEmpInactive();">Inactivos</button>
+                                    <button class="btn btn-success float-left" onclick="listEmp();">Activos</button>
+                                    <button class="btn btn-warning float-right" onclick="search();">Buscar</button>
+                                    <input id="txtBusqueda" type="text" class="float-right mr-4 form-control col-sm-3" placeholder="Buscar"/>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th></th>
+                                            <th>Nombre</th>
+                                            <th>A.Paterno</th>
+                                            <th>A.Materno</th>
+                                            <th>F.Nacimiento</th>
+                                            <th>Calle</th>
+                                            <th>Numero</th>
+                                            <th>Colonia</th>
+                                            <th>CP</th>
+                                            <th>Ciudad</th>
+                                            <th>Estado</th>
+                                            <th>Tel1</th>
+                                            <th>Tel2</th>
+                                            <th>Correo</th>
+                                            <th>Contraseña</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbodyEmpleados">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    listEmp();
+</script>
